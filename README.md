@@ -1,4 +1,7 @@
-##  1일차 강의 요약 : [Day1.md](./Day1.md)
+##  1일차 강의 요약 
+[Day1.md](https://gist.github.com/rfshim/b471060f060b2de08dc6451c2f592bbc.js)
+
+<hr>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
