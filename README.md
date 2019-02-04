@@ -1,5 +1,5 @@
 ##  1일차 강의 요약 
-[Day1.md](https://gist.github.com/rfshim/b471060f060b2de08dc6451c2f592bbc.js)
+[Day1.md](https://gist.github.com/rfshim/b471060f060b2de08dc6451c2f592bbc)
 
 <hr>
 
