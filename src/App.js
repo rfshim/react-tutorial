@@ -16,7 +16,7 @@ const data = [
 ]
 
 // 아래에 default로 export한 곳
-// Component 이름은 항상 대문자로 시작 
+// Component 이름은 항상 대문자로 시작
 class App extends Component {
   // constructor, React에서 생성자는 (C++ 와 달리) class 이름이 아닌 constucgtor라는 함수를 명시적으로 사용함
   // super()를 costructor에서 부르지 않으면 this가 초기화 되지 않아 접근 할수 없음
@@ -26,7 +26,7 @@ class App extends Component {
     // state 변수 선언, {}로 object로 초기화
     this.state = { myVisitCounter: 0 }
 
-    // 아래 bind는 왜 하는것인가? 
+    // 아래 bind는 왜 하는것인가?
     // 만약 bind 하지 않으면....
     // reset 버튼 클릭시 TypeError: Cannot read property 'setState' of undefined 발생
     // visitCounter는 정상 동작???
@@ -43,10 +43,12 @@ class App extends Component {
   }
 
   render() {
+
+    const IconListRender = ({ writer, title, content, onClick }) => (
     // 실제로 각각의 list를 render해주는 기능을 함수로 정의하고 이를 props로 넘겨줌
     // 어디서 넘기냐면.. return 으로 그려주는곳...
     // 각각의 부분을 click할때 마다 동작을 해야 하므로, div에 onClick을 붙여둠
-    const IconListRender = ({ writer, title, content, onClick }) => (
+    // IconListRender는 함수형 component, https://reactjs.org/docs/components-and-props.html
       <div onClick={onClick}>
         <p>{writer}</p>
         <code>{title}</code>
@@ -83,13 +85,14 @@ class App extends Component {
   }
 }
 
+// class 밖에 선언하는 함수는 function 이라고 명시적으로 표기
 function MyBoard(props) {
   // board id, data 들...., data를 그리는 함수, onClick(), myVisitCounter함수를 ...
   // props에서 넘어온거에서 저장해두고..
   // myVisitCounter는 넘겨온게 엄는데.. vist으로 가져와야 하는게 아닐까?
   const { boardId, data, ListRender, onClick, myVisitCounter } = props
 
-  // 각각의 그리는데.. 
+  // 각각의 그리는데..
   // 여러개 그릴때는 div별 unique id를 줘야 하는데.. 여기서는 div id를 왜 주었을가???
   // 1) 먼저 랜덤값을 굵게 출력하는데, myVisitCounter가 아닌 visit으로 받아와야 정상적으로 visit counter를 출력
   // 2) text box 하나 아무의미 없이 그리고
@@ -113,5 +116,5 @@ function MyBoard(props) {
   )
 }
 
-// default 
-export default App; 
+// default
+export default App;
