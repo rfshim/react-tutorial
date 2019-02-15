@@ -1,6 +1,6 @@
 ##  1일차/2일차 강의 요약 
-[Day1.md](https://gist.github.com/rfshim/b471060f060b2de08dc6451c2f592bbc)
-[Day2.md](https://gist.github.com/rfshim/9e8a8c40ba8ba1215e939a569d6acfe7)
+- [Day1.md](https://gist.github.com/rfshim/b471060f060b2de08dc6451c2f592bbc)
+- [Day2.md](https://gist.github.com/rfshim/9e8a8c40ba8ba1215e939a569d6acfe7)
 
 <hr>
 
