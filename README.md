@@ -1,5 +1,6 @@
-## 강의 요약 wiki 
-- https://github.com/rfshim/react-tutorial.wiki.git
+## 강의 요약 (wiki)
+- [1일차](https://github.com/rfshim/react-tutorial/wiki/Day1)
+- [2일차](https://github.com/rfshim/react-tutorial/wiki/Day2)
 
 <hr>
 
