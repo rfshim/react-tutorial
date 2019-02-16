@@ -5,7 +5,7 @@ import './App.css';
 const data = require('./data.json')
 //const data = import('./data.json')  //이렇게도 가능...
 
-class NewApp extends Component {
+class Day2 extends Component {
   constructor(props) {
     super(props)
     this.state = {indexNum : 0, clickCounter:0}
@@ -61,4 +61,4 @@ function MyData(props) {
   );
 }
 
-export default NewApp;
+export default Day2;
