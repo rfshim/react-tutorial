@@ -8,29 +8,28 @@ import myData from './testdata.json'
 class Day3_2 extends Component {
   constructor(props) {
     super(props)
-    this.state = {textIndex : 0}
-
+    this.state = {textIndex : 0, myText : ""}
+    
     this.clickSubject = this.clickSubject.bind(this)
-  }
+    this.updateText = this.updateText.bind(this)
+}
 
   clickSubject(newIndex) {
     this.setState({textIndex : newIndex})
   }
 
-  submitData() {
-
+  updateText(ev) {
+    this.setState({myText : ev.target.value})
   }
-  
-  input
-
 
   render(){
     return(
       <div>
-        <h1>WWWWWWWW</h1>
+        <h1>React 3일차</h1>
         <hr/>
         <PrintArticle current={myData[this.state.textIndex]}/>
-        <InputBox/>
+        <hr/>
+        <GetInputData myText={this.state.myText} updateText={this.updateText}/>
         <hr/>
         <PrintList datalist={myData} clickfunc={this.clickSubject}/>
       </div>
@@ -38,8 +37,20 @@ class Day3_2 extends Component {
   }
 }
 
-function InputBox(props) {
-  const {} = props
+function GetInputData(props) {
+  const {myText, updateText} = props
+
+  return (
+    <div>
+      <label>
+        이름 :
+        <input
+          value ={myText} 
+          onChange = {updateText}
+        />
+      </label>
+   </div>
+  );
 }
 
 function PrintArticle(props) {
