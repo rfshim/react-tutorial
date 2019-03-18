@@ -26,6 +26,8 @@ class MyBaord extends Component {
     this.writeBuffer = this.writeBuffer.bind(this)
     this.updateBuffer = this.updateBuffer.bind(this)
     this.selectPage = this.selectPage.bind(this)
+
+    console.log(this.state.data)
   }
 
   // currentIndex를 변경하는 함수
@@ -223,19 +225,17 @@ function PrintList(props) {
   return(
     <div>
       <h3>PrintList()</h3>
-      <p>
         {
           newList.map(
             (data, idx) => {
               return(
-                <ul key={idx} onClick={() => selectFunc(idx)}>
+                <ul key={idx} onClick={() => selectFunc(idx+(currentPage*10))}>
                   {idx+(currentPage*10)} : {data.subject}
                 </ul>
               )
             }
           )
         }
-      </p>
     </div>
   )
 }
@@ -254,15 +254,16 @@ function PrintPage(props) {
   return(
     <div>
       <p>PrintPage</p>
-      <p>
-        {pages.map(
-          (data,idx) => 
-          <td key={idx} onClick={() => selectPage(idx)}>
-            {data+"."}            
-          </td>
-        )
+      <tr>
+        {
+          pages.map(
+            (data,idx) => 
+            <td key={idx} onClick={() => selectPage(idx)}>
+              {data+"."}            
+            </td>
+          )
         }
-      </p>      
+      </tr>
     </div>
   )
 }
